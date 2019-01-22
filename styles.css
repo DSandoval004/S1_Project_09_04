@@ -5,7 +5,7 @@
 
     Author:     Diego Sandoval
     Start Date: 1/17/19
-    Updated:    1/17/19
+    Updated:    1/22/19
 */
 
 /* Page Styles */
@@ -25,19 +25,27 @@ header img {
 
 /* Section Styles */
 section {
-    box-shadow: 0px 0px 25px black;
-    background: rgb(250, 250, 250);
+    width: 90%;
     margin: 20px auto 20px;
     padding: 10px;
-    width: 90%;
+
+    background: rgb(250, 250, 250);
+    box-shadow: 0px 0px 25px black;
+    border: 0px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
 
 section h1 {
+    margin-left: .5em;
     font-size: 3em;
     line-height: 0em;
+
     color: rgb(254, 254, 8);
     text-shadow: 0px 0px 5px black;
-    margin-left: .5em;
 }
 
 /* Web Form Styles */
@@ -46,12 +54,14 @@ form {
 }
 
 form>fieldset {
-    border: 5px solid rgb(0, 0, 200);
+    float: left;
+
+    width: 45%;
+    min-height: 410px;
     margin: 10px;
     padding: 5px;
-    float: left;
-    min-height: 410px;
-    width: 45%;
+
+    border: 5px solid rgb(0, 0, 200);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -60,24 +70,26 @@ form>fieldset {
 }
 
 legend {
+    margin: 5px;
+    padding: 5px;
     font-size: 1.7em;
+
     color: rgb(254, 254, 8);
     text-shadow: 0px 0px 5px black;
-    padding: 5px;
-    margin: 5px;
 }
 
 label {
-    font-size: 1.2em;
     margin: 5px;
-    line-height: 1.2em;
     margin-left: 10%;
+    font-size: 1.2em;
+    line-height: 1.2em;
 }
 
 div>input,
 select,
 textarea {
     float: right;
+
     margin-right: 10%;
     margin-left: auto;
 }
@@ -88,7 +100,44 @@ textarea {
 
 button {
     font-size: 2em;
+}
+
+div#formButtons {
+    display: -webkit-flex;
+
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    clear: both;
+
     margin: 5px auto 5px;
 }
 
-div#formButtons {}
+/* Validation */
+input:focus:not([type='radio']) {
+    background: rgb(255, 218, 165);
+}
+
+input:focus:valid:not([type='radio']) {
+    background: rgb(215, 218, 165) url(valid.png) bottom right/contain no-repeat;
+}
+
+input:focus:invalid:not([type='radio']) {
+    background: rgb(255, 245, 215) url(invalid.png) bottom right/contain no-repeat;
+}
+
+/* Footer styles */
+footer {
+    width: 99%;
+    height: 55px;
+    margin: 5px auto 5px;
+
+    background: rgb(133, 133, 133);
+    box-shadow: 0px 0px 25px black;
+    border: 0px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
