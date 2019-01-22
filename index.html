@@ -25,42 +25,50 @@
 </head>
 
 <body>
-
+    <!-- Header Tag with the logo in it. -->
     <header>
         <img src="mc_logo.png" alt="">
     </header>
-
+    <!-- Section Tag to hold the web form in. -->
     <section>
+        <!-- Heading 1 tag to show what form it is. -->
         <h1>Order Form</h1>
+        <!-- Web for to oeder a computer, use the post method and sends it to http://www.mill_computers.com/orders/process.cgi. Legend of customer information.  -->
         <form action="http://www.mill_computers.com/orders/process.cgi" method="post">
             <fieldset>
                 <legend>Customer Information</legend>
                 <div>
+                    <!-- Input box for user to enter their first name, this box is marked required so user have to put information in it. -->
                     <label for="firstBox">First Name</label>
                     <input type="text" name="fName" id="firstBox" required>
                 </div>
 
                 <div>
+                    <!-- Input box for user to enter their last name, this box is marked required so user have to put information in it. -->
                     <label for="lastBox">Last Name</label>
                     <input type="text" name="lName" id="lastBox" required>
                 </div>
 
                 <div>
+                    <!-- Input box for user to enter their street address, this box is marked required so user have to put information in it. -->
                     <label for="streetBox">Street Address</label>
                     <input type="text" name="street" id="streetBox" required>
                 </div>
 
                 <div>
+                    <!-- For user with a second street address that they would like to include. -->
                     <label for="streetBox2">Street Address (2)</label>
                     <input type="text" name="street2" id="streetBox2">
                 </div>
 
                 <div>
+                    <!-- Input box for users city to be entered, this box is marked required so user have to put information in it. -->
                     <label for="cityBox">City</label>
                     <input type="text" name="city" id="cityBox" required>
                 </div>
 
                 <div>
+                    <!-- Input box with a list of possible states for user to enter in, this box is marked required so user have to put information in it. -->
                     <label for="stateBox">State</label>
                     <input type="text" name="state" id="stateBox" list="stateList" required>
                     <datalist id="stateList">
@@ -118,19 +126,23 @@
                 </div>
 
                 <div>
+                    <!-- Input box for user to enter their ZIP code number into, it has a pattern to make sure the user enters it in the correct format, this box is marked required so user have to put information in it. -->
                     <label for="zipBox">ZIP/Postal Code</label>
                     <input type="text" name="zip" id="zipBox" pattern="^\d{5}(-\d{4})?$" required>
                 </div>
 
                 <div>
+                    <!-- Input box for user to put their phone number in, it also has a patter so it checks to make sure the user phone number is in the correct form, this box is marked required so user have to put information in it. -->
                     <label for="phone">Phone</label>
                     <input type="tel" name="phone" id="phoneBox" pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$"
                         required>
                 </div>
             </fieldset>
+            <!-- Fieldset for user to choose what specs they want, legend of specs. -->
             <fieldset>
                 <legend>Specs</legend>
                 <div>
+                    <!-- Select list for user to select what Processor Speed they want. -->
                     <label for="pSpeedBox">Processor Speed</label>
                     <select name="pSpeed" id="pSpeedBox">
                         <option value="">Choose an Option</option>
@@ -140,8 +152,9 @@
                     </select>
                 </div>
                 <div>
-                    <label for="">Memory</label>
-                    <select name="" id="">
+                    <!-- Select list for user to select what Memory they want. -->
+                    <label for="memBox">Memory</label>
+                    <select name="mem" id="memBox">
                         <option value="">Choose an Option</option>
                         <option value="1GB">1 GB</option>
                         <option value="2GB">2 GB</option>
@@ -150,8 +163,9 @@
                     </select>
                 </div>
                 <div>
-                    <label for="">Monitor</label>
-                    <select name="" id="">
+                    <!-- Select list for user to select what Monitor they want. -->
+                    <label for="monitorBox">Monitor</label>
+                    <select name="monitor" id="monitorBox">
                         <option value="">Choose an Option</option>
                         <option value="15">15"</option>
                         <option value="17">17"</option>
@@ -160,8 +174,9 @@
                     </select>
                 </div>
                 <div>
-                    <label for="">Hard Drive Size</label>
-                    <select name="" id="">
+                    <!-- Select list for user to select what Hard Drive Size they want. -->
+                    <label for="hdBox">Hard Drive Size</label>
+                    <select name="hd" id="hdBox">
                         <option value="">Choose an Option</option>
                         <option value="240GB">240 GB</option>
                         <option value="500GB">500 GB</option>
@@ -170,18 +185,22 @@
                     </select>
                 </div>
                 <div>
+                    <!-- A radio button to select if the user wants a DVD Burner. -->
                     <label for="dvdBox">DVD Burner (Check to add)</label>
                     <input type="radio" name="dvd" id="dvdBox">
                 </div>
                 <div>
+                    <!-- A radio button to select if the user wants a Tuner Card. -->
                     <label for="tunerBox">Tuner Card (Check to add)</label>
                     <input type="radio" name="tuner" id="tunerBox">
                 </div>
                 <div>
+                    <!-- A radio button to select if the user wants a Media Card. -->
                     <label for="mcardBox">Media Card (Check to add)</label>
                     <input type="radio" name="mcard" id="mcardBox">
                 </div>
                 <div>
+                    <!-- A yes or no radio button to select if the user wants the 24 month extended warranty. -->
                     <label>24-Month Extended Warranty</label>
                     <fieldset>
                         <label for="wYes">Yes</label>
@@ -191,6 +210,7 @@
                     </fieldset>
                 </div>
                 <div>
+                    <!-- A textarea for the user to enter any Additional Information that they might want. -->
                     <label for="addInfoBox">Additional Information?</label>
                     <div>
                         <textarea name="addinfo" id="addInfoBox" rows="10"></textarea>
@@ -198,16 +218,19 @@
                 </div>
             </fieldset>
             <div id="formButtons">
+                <!-- Submit button -->
                 <button type="submit">Send Order</button>
+                <!-- Reset button -->
                 <button type="reset">Cancel Order</button>
+                <!-- Contact Me button -->
                 <button>Contact Me</button>
             </div>
         </form>
     </section>
-
+    <!-- Page footer tag -->
     <footer>
-
     </footer>
+    <!-- Link to javaScript. -->
     <script src="mc_script.js" async defer></script>
 
 </body>
