@@ -9,6 +9,7 @@
 */
 
 /* Page Styles */
+/* Sets the background color of the page and the body. */
 html {
     background: rgb(133, 133, 133);
 }
@@ -18,12 +19,14 @@ body {
 }
 
 /* Header Styles */
+/* Sets the width and height of the image in the header realative of the header. */
 header img {
     width: 100%;
     height: 100px;
 }
 
 /* Section Styles */
+/* Sets the styles of the section element, the changes the look of the heading 1 element to match the logo text better. */
 section {
     width: 90%;
     margin: 20px auto 20px;
@@ -49,6 +52,7 @@ section h1 {
 }
 
 /* Web Form Styles */
+/* Sets the width of the form, and makes the fieldsets be next to eachotherr and have a blue border with curved corners. */
 form {
     width: 100%;
 }
@@ -69,6 +73,7 @@ form>fieldset {
     -o-border-radius: 10px;
 }
 
+/* Makes the legend and labels look better and have good spacing to make it easier to read. */
 legend {
     margin: 5px;
     padding: 5px;
@@ -85,6 +90,7 @@ label {
     line-height: 1.2em;
 }
 
+/* Makes all the inputs float to the left to make it look nice. Then make the textarea have a set width so that it change size with the elements and look nice. */
 div>input,
 select,
 textarea {
@@ -98,6 +104,7 @@ textarea {
     width: 79%;
 }
 
+/* Set the font size of the buttons, and made them flexbox to look more flush. */
 button {
     font-size: 2em;
 }
@@ -114,19 +121,23 @@ div#formButtons {
 }
 
 /* Validation */
+/* This changes the background color when the input, select or textarea is in use. */
 input:focus:not([type='radio']) {
     background: rgb(255, 218, 165);
 }
 
+/* This shows if the information is vaild. */
 input:focus:valid:not([type='radio']) {
     background: rgb(215, 218, 165) url(valid.png) bottom right/contain no-repeat;
 }
 
+/* This shows if the information is invaild. */
 input:focus:invalid:not([type='radio']) {
     background: rgb(255, 245, 215) url(invalid.png) bottom right/contain no-repeat;
 }
 
 /* Footer styles */
+/* This is to put something at the bottom so their wasn't an akward space between the header and the web form section, pretty much it is to make the page look nicer. */
 footer {
     width: 99%;
     height: 55px;
